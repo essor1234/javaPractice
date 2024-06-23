@@ -187,4 +187,124 @@ public class SinglyLinkedList {
             return current;
         }
     }
+
+//    Searching value in linked list
+    public boolean search(int value){
+//        Create a pointer that gonna point to the head
+        ListNode current = head;
+//        Start a while loop, run until it reach the end of the list
+        while(current != null){
+//            Check if the current value of the node is the required value
+            if(current.data == value){
+                return true;
+            }
+//            If not the required value, update the current pointer to the next node
+            current = current.next;
+        }
+//        If there's no required value in the list
+        return false;
+    }
+
+    public void reverse(){
+        if(head == null){
+            return;
+        }
+//        The current pointer for pointing at the node need to reverse
+//        Initialize at head node
+        ListNode current = head;
+//        The previous pointer to point of the node before the current pointer
+        ListNode previous = null;
+//        The next pointer to get the next node from the current pointer
+        ListNode next = null;
+//        Start the loop until reach the end of the list
+        while(current != null){
+//            Update the next pointer
+            next = current.next;
+//            Update connection of node
+            current.next = previous;
+ //          Update previous pointer to current position
+            previous = current;
+//            Update urrent pointer
+            current = next;
+        }
+        // Update the head of the list to the new head (i.e., the last node of the original list)
+        head = previous;
+
+    }
+
+    public void removeDuplicate(){
+        if(head == null){
+            return;
+        }
+//        Create a pointer that point at the head node
+        ListNode current = head;
+//        Start a loop until reach null at the current and next null
+        while(current != null && current.next != null){
+//            Check if the data of current and next node is the same
+            if(current.data == current.next.data){
+//             Change the connection of the current node to the following node
+                current.next = current.next.next;
+            }else{
+//                Update the current pointer if not equal
+                current = current.next;
+            }
+        }
+    }
+
+    public void insertNodeSort(int value){
+        // Create new node
+        ListNode node = new ListNode(value);
+        // If the list is empty or the new node should be inserted before the head
+        if(head == null || head.data > node.data){
+            node.next = head;
+            head = node;
+        } else {
+            // Create a pointer that points at the head node
+            ListNode current = head;
+            // Create a while loop until it reaches null
+            // or the new node is smaller than the next node
+            ListNode temp = null;
+            while(current != null && current.data < node.data){
+                // Create a temporary to get the previous node
+                temp = current;
+                // Update current node
+                current = current.next;
+            }
+            // Connect new node to the list
+            node.next = current;
+            temp.next = node;
+        }
+    }
+
+    public void removeByKey(int value){
+
+//        Pointer that gonna point to the head
+        ListNode current = head;
+//        pointer that's a temporary
+        ListNode temp = null;
+        if(current != null && current.data == value){
+            head = current.next;
+            return;
+        }
+//        Loop through the the list until it reach null or required value
+        while(current != null && current.data != value){
+//            Update the temp to the current pointer
+            temp = current;
+//            Update the current pointer
+            current = current.next;
+        }
+//       Check if current is null
+        if(current == null){
+            return;
+        }
+//        remove the node the match value and
+//        connect the temp to the following one
+        temp.next = current.next;
+
+
+
+
+    }
+
+
 }

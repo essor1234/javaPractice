@@ -29,45 +29,74 @@ public class Main {
         sll.linkNodes(head, second); // 10-->1
         sll.linkNodes(second,third); // 10 --> 1 --> 8
         sll.linkNodes(third, fourth); // 10 --> 1 --> 8 --> 11 --> null
-//        Insert new node add the head of the linked list
-        sll.insertFirst(2);
-//        Print the linked out
+////        Insert new node add the head of the linked list
+//        sll.insertFirst(2);
+////        Print the linked out
+////        sll.displayLinkedList();
 //        sll.displayLinkedList();
+//        sll.insertFirst(12);
+//        System.out.println();
+//        sll.displayLinkedList();
+//        System.out.println();
+////        Add new node at the end of the linked list
+//        sll.insertLast(28);
+//        sll.displayLinkedList();
+////        Add new node at any position
+//        sll.insert(19,3); //12->2->19->10->1->8->11->28->null
+//        sll.insert(77,1);
+//        System.out.println();
+//        sll.displayLinkedList();
+////        Remove first node of the list
+//        System.out.println();
+//        System.out.println("Remove first Node");
+//        sll.deleteFirst();
+//        sll.displayLinkedList();
+////        Remove last node of the list
+//        System.out.println();
+//        System.out.println("Remove Last Node");
+//        System.out.println(sll.deleteLast().data);
+//        sll.displayLinkedList();
+////        Remove any node
+//        System.out.println();
+//        System.out.println("Remove any Node");
+//        System.out.println(sll.delete(3).data);
+//        System.out.println(sll.delete(1).data);
+//        sll.displayLinkedList();
+////      Seaching in list
+//        System.out.println();
+//        System.out.println("Seaching node");
+//        System.out.println(sll.search(11)); //True
+//        System.out.println(sll.search(28)); //false
+////        Reverse link list
+//        sll.displayLinkedList();
+//        System.out.println();
+//        System.out.println("reverse node");
+//        sll.reverse();
+//        sll.displayLinkedList();
+////        Remove duplicate
+//        sll.insert(19,3); //12->2->19->10->1->8->11->28->null
+//        sll.insert(19,3); //12->2->19->10->1->8->11->28->null
+//        sll.insertLast(13); //12->2->19->10->1->8->11->28->null
+//        sll.insertLast(13); //12->2->19->10->1->8->11->28->null
+//        sll.displayLinkedList();
+//        System.out.println();
+//        System.out.println("Remove duplicate node");
+//        sll.removeDuplicate();
+//        sll.displayLinkedList();
+//        Insert new node in sort
+//        sll.displayLinkedList();
+//        System.out.println();
+//        System.out.println("insert sort node");
+//        sll.insertNodeSort(22);
+//        sll.insertNodeSort(23);
+//        sll.insertNodeSort(24);
+//        sll.displayLinkedList();
+//        remove by key
         sll.displayLinkedList();
-        sll.insertFirst(12);
         System.out.println();
+        System.out.println("Remove node by key");
+        sll.removeByKey(1);
         sll.displayLinkedList();
-        System.out.println();
-//        Add new node at the end of the linked list
-        sll.insertLast(28);
-        sll.displayLinkedList();
-//        Add new node at any position
-        sll.insert(19,3); //12->2->19->10->1->8->11->28->null
-        sll.insert(77,1);
-        System.out.println();
-        sll.displayLinkedList();
-//        Remove first node of the list
-        System.out.println();
-        System.out.println("Remove first Node");
-        sll.deleteFirst();
-        sll.displayLinkedList();
-//        Remove last node of the list
-        System.out.println();
-        System.out.println("Remove Last Node");
-        System.out.println(sll.deleteLast().data);
-        sll.displayLinkedList();
-//        Remove any node
-        System.out.println();
-        System.out.println("Remove Last Node");
-        System.out.println(sll.delete(3).data);
-        System.out.println(sll.delete(1).data);
-
-        sll.displayLinkedList();
-
-
-
-
-
     }
 
 
