@@ -92,12 +92,21 @@ public class Main {
 //        sll.insertNodeSort(24);
 //        sll.displayLinkedList();
 //        remove by key
-        sll.displayLinkedList();
+//        sll.displayLinkedList();
+//        System.out.println();
+//        System.out.println("Remove node by key");
+//        sll.removeByKey(1);
+//        sll.displayLinkedList();
+//      Check loop
+        SinglyLinkedList sll2 = new SinglyLinkedList();
+        sll2.createLoopInLinkList();
+//        sll2.displayLinkedList();
         System.out.println();
-        System.out.println("Remove node by key");
-        sll.removeByKey(1);
-        sll.displayLinkedList();
+        System.out.println("Check loop in list");
+        System.out.println(sll2.isLoop());
     }
+
+
 
 
 

@@ -301,8 +301,46 @@ public class SinglyLinkedList {
 //        connect the temp to the following one
         temp.next = current.next;
 
+    }
+
+    public boolean isLoop(){
+//        Create pointer for checking
+        ListNode fast = head;
+        ListNode slow = head;
+//        Start loop until get null
+//        Because the fast pointer gonna twice as fast as the slow pointer,
+//        so need to check to make sure the following node is not exist
+//        The Point here is that if their's a loop in list, let the looprun until end,
+//        Or until two pointer get the same node, cause the fast pointer is faster than the slow one
+        while(fast != null && fast.next != null){
+//            update fast pointer to the following node
+            fast = fast.next.next;
+//            Update slow pointer to the next node
+            slow = slow.next;
+            if(fast == slow){
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+    public void createLoopInLinkList(){
+        SinglyLinkedList.ListNode first = new SinglyLinkedList.ListNode(10);
+        SinglyLinkedList.ListNode second = new SinglyLinkedList.ListNode(1);
+        SinglyLinkedList.ListNode third = new SinglyLinkedList.ListNode(8);
+        SinglyLinkedList.ListNode fourth = new SinglyLinkedList.ListNode(11);
+        SinglyLinkedList.ListNode fifth = new SinglyLinkedList.ListNode(20);
+        SinglyLinkedList.ListNode sixth = new SinglyLinkedList.ListNode(22);
 
 
+        head = fifth;
+        first.next = second;
+        second.next = third;
+        third.next = fourth;
+        fourth.next = fifth;
+        fifth.next = sixth;
+        sixth.next = third;
 
     }
 
